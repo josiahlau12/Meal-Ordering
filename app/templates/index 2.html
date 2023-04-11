@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Food Ordering</title>
+<h1 align="center">Order Your Meals</h1>
+<Script>
+    function checkform()
+    {
+    var myname = document.getElementById("name").value;
+    var Mydrink;
+    var Mymain;
+    
+    if(document.getElementById("Coffee").checked == true)
+      {
+        Mydrink = "BREW COFFEE";
+      }
+      if(document.getElementById("Coke").checked == true)
+      {
+        Mydrink = "SOFT DRINK-COKE";
+      }
+      if(document.getElementById("Tea").checked == true)
+      {
+        Mydrink = "GREEN TEA";
+      }
+      if(document.getElementById("Noodle").checked == true)
+      {
+        Mymain = "INSTANT NOODLE";
+      }
+      if(document.getElementById("Pizza").checked == true)
+      {
+        Mymain = "HAWAIIAN PIZZA";
+      }
+      if(document.getElementById("Rice").checked == true)
+      {
+        Mymain = "YOUNG CHOW FRIED RICE";
+      }
+    
+      document.getElementById("textshow").innerHTML = "Saya Minum: "+Mydrink + " for "+ myname;
+      document.getElementById("textshow1").innerHTML = "Main Dishes: "+Mymain + " Enjoy your food! ";
+      return false;
+      
+    
+    }
+    </Script>
+
+</head>
+
+<body>
+
+    <form method="post" onsubmit="return checkform()">
+
+    <table align="center" border="1" width="400">
+        <tr><td>Name:</td><td><input type="text" id="name" name="name" maxlength="30"></td></tr>
+        <tr><td>Drinks:</td>
+        <td>
+        <input type="radio" id="Coffee" name="drinks" value="Coffee">Coffee
+        <input type="radio" id="Coke" name="drinks" value="Coke">Coke
+        <input type="radio" id="Tea" name="drinks" value="Tea">Tea
+        </td></tr>
+        
+        <tr><td>Main Dishes:</td>
+        <td>
+        <input type="radio" id="Pizza" name="Dishes" value="Pizza">Pizza
+        <input type="radio" id="Noodle" name="Dishes" value="Noodle">Noodle
+        <input type="radio" id="Rice" name="Dishes" value="Rice">Rice
+        </td>
+        </tr>
+        
+        <tr><td><input type="submit" value="Next"></td><td>Click Next To Show Your Answer.</td>
+        
+        </tr>
+        </table>
+
+
+</form>
+
+
+<br><br>
+
+<table align="center" border="1" width="400">
+             <tr>
+                 <td width=30%>Greeting:</td><td>Welcome to ABC Restaurant</td>
+             </tr>
+             <tr>
+                 <td width=30%>Message 1:</td><td><div id="textshow"></div></td>
+             </tr>
+             <tr>
+                <td width=30%>Message 2:</td><td><div id="textshow1"></div></td>
+            </tr>
+             </table>
+
+
+</body>
+</html>
